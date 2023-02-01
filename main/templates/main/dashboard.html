@@ -1,0 +1,80 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block PageTitle %}Home{% endblock PageTitle %}
+
+{% block PageHeader %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/assets/css/widgets/modules-widgets.css' %}">    
+{% endblock PageHeader %}
+
+{% block ContentTitle %}Home{% endblock ContentTitle %}
+
+
+
+{% block PageContent %}
+<br>
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+
+    <div class="widget widget-account-invoice-three">
+
+        <div class="widget-heading">
+            <div class="wallet-usr-info">
+                <div class="usr-name">
+                    <span><img src="{% static 'main/assets/img/90x90.jpg' %}" alt="admin-profile" class="img-fluid"> Summary</span>
+                </div>
+                <div class="add">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                </div>
+            </div>
+            <div class="wallet-balance">
+                <p>Total Transactions</p>
+                <h5 class=""><span class="w-currency">₹</span>00000</h5>
+            </div>
+        </div>
+
+        <div class="widget-amount">
+
+            <div class="w-a-info funds-received">
+                <span>Received <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span>
+                <p>₹ 00.00</p>
+            </div>
+
+            <div class="w-a-info funds-spent">
+                <span>Sent <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                <p>₹ 00.00</p>
+            </div>
+        </div>
+
+        <div class="widget-content">
+
+            <div class="bills-stats">
+                <span>Pending</span>
+            </div>
+
+            <div class="invoice-list">
+
+                <div class="inv-detail">
+                    <div class="info-detail-1">
+                        <p>ROI Generated</p>
+                        <p><span class="w-currency">₹</span> <span class="bill-amount">00.00</span></p>
+                    </div>
+                    <div class="info-detail-2">
+                        <p>Payouts Generated</p>
+                        <p><span class="w-currency">₹</span> <span class="bill-amount">00.00</span></p>
+                    </div>
+                </div>
+
+                <div class="inv-action">
+                    <a href="javascript:void(0);" class="btn btn-outline-primary view-details">View Details</a>
+                    <a href="javascript:void(0);" class="btn btn-outline-primary pay-now">Check Accounts</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock PageContent %}
+
+{% block JSblock %}
+<script src="{% static 'main/assets/js/widgets/modules-widgets.js' %}"></script>
+{% endblock JSblock %}

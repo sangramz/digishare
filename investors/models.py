@@ -27,6 +27,17 @@ class Transactions(models.Model):
         return self.txnFrom
     
 
+
+class Deposits(models.Model):
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    amount = models.FloatField()
+    #balance = models.FloatField()
+
+    def __str__(self):
+        return f'{self.user.user.username} deposited {self.amount}'
+    
+
+
 class Earnings(models.Model):
     pass
 

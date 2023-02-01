@@ -4,8 +4,8 @@ from investors import models as investorsModels
 # Create your models here.
 class InvestmentPlans(models.Model):
     propTitle           = models.CharField(max_length=100)
-    propDescription     = models.CharField(max_length=700)
-    propDetails         = models.CharField(max_length=500)
+    propDescription     = models.TextField()
+    propDetails         = models.TextField()
     propLocation        = models.CharField(max_length=100)
     propImage           = models.ImageField(upload_to='images/')
     amount              = models.FloatField()
@@ -24,7 +24,9 @@ class Investments(models.Model):
     amount              = models.FloatField()
     investDate          = models.DateTimeField(auto_now_add=True)
 
-
+    def __str__(self):
+        return f'{self.user.user.username} invested {self.amount} on {self.propInvested.propTitle} '
+    
     
     
    
