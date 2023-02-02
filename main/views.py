@@ -20,6 +20,11 @@ def dashboard(request):
 def investment_plans(request):
     return render(request, 'main/investment.html')
 
+
+def add_investment_plans(request):
+    return render(request, 'main/add-investment.html')
+
+
 def login(request):
     pass
 
