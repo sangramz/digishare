@@ -10,6 +10,7 @@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     {% block PageHeader %}{% endblock PageHeader %}
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{% static 'main/assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'main/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'main/assets/css/plugins.css' %}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
@@ -214,7 +215,7 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    
+    <script src="{% static 'main/assets/plugins/global/plugins.bundle.js' %}"></script>
     <script src="{% static 'main/assets/js/libs/jquery-3.1.1.min.js' %}"></script>
     <script src="{% static 'main/bootstrap/js/popper.min.js' %}"></script>
     <script src="{% static 'main/bootstrap/js/bootstrap.min.js' %}"></script>
